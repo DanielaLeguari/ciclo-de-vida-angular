@@ -20,3 +20,10 @@
 
 - O OnInit é o lugar para criar lógicas adicionais logo após o componente/diretiva ser inicializado e antes de qualquer exibição ou componentes filhos serem verificados.
 - Um exemplo de lógica de inicialização é a de realizar uma busca em um método de um serviço. Importante ressaltar que este gancho é chamado apenas uma vez.
+
+
+## ngOnChanges()
+
+- O Angular utiliza um mecanismo de detecção de mudança que identifica quando um componente tem uma propriedade de entrada.
+- oOAngular precisa preparar as informações para serem renderizaradas. Depois de renderizadas, ele conseguirá trazê-las para a tela, chamando o OnInit.
+- Em resumo: primeiro temos o OnChanges para preparar as informações, depois temos o OnInit para trazer as informações para a tela, mostrando nosso componente.
