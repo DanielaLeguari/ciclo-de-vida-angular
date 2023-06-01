@@ -27,3 +27,5 @@
 - O Angular utiliza um mecanismo de detecção de mudança que identifica quando um componente tem uma propriedade de entrada.
 - oOAngular precisa preparar as informações para serem renderizaradas. Depois de renderizadas, ele conseguirá trazê-las para a tela, chamando o OnInit.
 - Em resumo: primeiro temos o OnChanges para preparar as informações, depois temos o OnInit para trazer as informações para a tela, mostrando nosso componente.
+- O OnChanges é o primeiro gancho a ser chamado, mas somente quando o componente/diretiva possui propriedades de entrada de dados.
+- O que difere o OnInit do OnChanges é que o OnInit é chamado somente uma vez durante toda vida do componente/diretiva, já o OnChanges é chamado sempre que houver mudança nas propriedades de entrada de dados.
