@@ -1,27 +1,17 @@
-# LifeCycle
+# Aplicação de Lista de compras
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-## Development server
+## Instalação de dependências
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- `npm i`
 
-## Code scaffolding
+## Execusão do projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- `ng serve --o`
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Ciclo de vida no Angular
 
-## Running unit tests
+- Tudo começa quando o Angular instancia a classe do componente, ou seja, quando ele chama a classe do componente e o exibe na tela. A vida dele acontece quando o Angular mostra os itens, interage com a pessoa usuária e interage com outros componentes. Por fim ele é destruído quando o componente ou diretiva não é mais utilizada, então o Angular destrói a instância dessa classe.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- O Angular chama algum método no decorrer da vida dele, ou seja, em cada um desses momentos. Esses métodos são chamados de hooks (tradução: ganchos).
