@@ -10,7 +10,7 @@ import { ListaDeCompraService } from './service/lista-de-compra.service';
 export class AppComponent implements OnInit, DoCheck {
   title = 'app-lista-de-compras';
   listaDeCompra!: Array<Item>;
-  itemParaSerEditado! : Item;
+  itemParaSerEditado!: Item;
 
   constructor
     (
@@ -30,6 +30,11 @@ export class AppComponent implements OnInit, DoCheck {
   ngDoCheck(): void {
     console.log('DoCheck foi chamado!')
     this.listaService.atualizarLocalStorage();
+  }
+
+  deletarItem(id: Number) {
+    const index = this.listaDeCompra.findIndex((item) => item.id === id);
+    this.listaDeCompra.splice(index, 1);
   }
 
 
