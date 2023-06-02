@@ -29,3 +29,11 @@
 - Em resumo: primeiro temos o OnChanges para preparar as informações, depois temos o OnInit para trazer as informações para a tela, mostrando nosso componente.
 - O OnChanges é o primeiro gancho a ser chamado, mas somente quando o componente/diretiva possui propriedades de entrada de dados.
 - O que difere o OnInit do OnChanges é que o OnInit é chamado somente uma vez durante toda vida do componente/diretiva, já o OnChanges é chamado sempre que houver mudança nas propriedades de entrada de dados.
+
+## ngDoCheck()
+
+- O DoCheck detecta tudo que o OnChange não consegue detectar, como quando uma propriedade é alterada ou quando um método é chamado de dentro desse componente. A única desvantagem do DoCheck é a quantidade de vezes que ele é invocado. Por exemplo, ao digitar no campo de texto da aplicação, vamos reparar que ele é chamado a cada caractere inserido ou removido.
+
+- Além disso, o DoCheck detecta alterações de componentes-filhos. Ou seja, o AppComponent está escutando todas as alterações dos componentes-filhos. Logo, ele pode ser utilizado para realizar verificações de propriedades em componentes.
+
+- É importante usar o DoCheck com cuidado por conta do número de vezes que ele é chamado, pois é possível ter perda de performance na aplicação
