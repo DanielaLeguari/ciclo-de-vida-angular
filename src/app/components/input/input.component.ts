@@ -9,6 +9,8 @@ import { ListaDeCompraService } from 'src/app/service/lista-de-compra.service';
 })
 export class InputComponent implements OnInit, OnChanges {
   @Input() itemQuevaiSerEditado!: Item;
+  editando = false;
+  textoBtn = 'Salvar item';
 
   valorItem!: string;
   constructor
@@ -27,9 +29,18 @@ export class InputComponent implements OnInit, OnChanges {
     this.valorItem = '';
   }
 
+  editarItem() {
+    this.listaService.editarItemDaLista(this.itemQuevaiSerEditado, this.valorItem);
+    this.limparCampo();
+    this.editando = false;
+    this.textoBtn = 'Salvar item';
+  }
+
   ngOnChanges(changes: SimpleChanges) {
     //console.log(changes['itemQuevaiSerEditado'].currentValue);
     if (!changes['itemQuevaiSerEditado'].firstChange) {
+      this.editando = true;
+      this.textoBtn = 'Editar item';
       this.valorItem = this.itemQuevaiSerEditado?.nome;
     }
   }
