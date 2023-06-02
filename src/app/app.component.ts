@@ -9,7 +9,8 @@ import { ListaDeCompraService } from './service/lista-de-compra.service';
 })
 export class AppComponent implements OnInit {
   title = 'app-lista-de-compras';
-  listaDeCompra!: Array<Item>
+  listaDeCompra!: Array<Item>;
+  itemParaSerEditado! : Item;
 
   constructor
     (
@@ -22,7 +23,8 @@ export class AppComponent implements OnInit {
   }
 
   editarItem(item: Item) {
-    console.log(item);
+    this.itemParaSerEditado = item;
+
   }
 
 
