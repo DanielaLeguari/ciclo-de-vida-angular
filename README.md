@@ -1,6 +1,8 @@
 # Aplicação de Lista de compras
 
 
+![](./src/assets/images/demonstracao.gif);
+
 ## Instalação de dependências
 
 - `npm i`
