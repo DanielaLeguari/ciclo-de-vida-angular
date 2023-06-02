@@ -36,4 +36,4 @@
 
 - Além disso, o DoCheck detecta alterações de componentes-filhos. Ou seja, o AppComponent está escutando todas as alterações dos componentes-filhos. Logo, ele pode ser utilizado para realizar verificações de propriedades em componentes.
 
-- É importante usar o DoCheck com cuidado por conta do número de vezes que ele é chamado, pois é possível ter perda de performance na aplicação
+- É importante usar o DoCheck com cuidado por conta do número de vezes que ele é chamado, pois é possível ter perda de performance na aplicação. O DoCheck é um gancho que é chamado sempre que houver qualquer alteração no componente.
